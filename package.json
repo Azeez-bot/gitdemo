@@ -1,0 +1,26 @@
+{
+  "name": "playwrightprojects",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "regression": "npx playwright test",
+    "WebTest": "npx playwright test --grep @Smoke",
+    "Safari Execution": "npx playwright test --grep @Smoke --config playwright.config1.js --project=safari",
+    "allure:report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "Cucumber": "npx cucumber-js --tags '@Afoo'  --exit --format html:cucumber-report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.14",
+    "allure-playwright": "^3.2.1"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "exceljs": "^4.4.0",
+    "typescript": "^5.8.3"
+  }
+}

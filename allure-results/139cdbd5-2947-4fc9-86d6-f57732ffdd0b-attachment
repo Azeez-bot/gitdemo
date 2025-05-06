@@ -1,0 +1,48 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: @Smoke Section 9 Part-1
+- Location: C:\Users\azeez\PlaywrightProjects\tests\Section9.spec.js:3:5
+
+# Error details
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Alert' })
+    - locator resolved to <input id="alertbtn" value="Alert" type="submit" class="btn-style" onclick="displayAlert()"/>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+    at C:\Users\azeez\PlaywrightProjects\tests\Section9.spec.js:9:51
+```
+
+# Test source
+
+```ts
+   1 | import {test,expect} from '@playwright/test'
+   2 |
+   3 | test('@Smoke Section 9 Part-1',async({page})=>{
+   4 |     await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
+   5 |     await page.getByPlaceholder("Hide/Show Example").isVisible();
+   6 |     await page.getByRole('button',{name:'Hide'}).click();
+   7 |     await page.getByPlaceholder("Hide/Show Example").isHidden(); 
+   8 |     page.on('dialog',dialog=>dialog.message());
+>  9 |     await page.getByRole('button',{name:'Alert'}).click();
+     |                                                   ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  10 |     await page.getByRole('button',{name:'Mouse Hover'}).hover();
+  11 |     const frameLocator=await page.frameLocator("#courses-iframe");
+  12 |     await frameLocator.locator("li a[href*='lifetime-access']:visible").click();
+  13 |     const textBox=await frameLocator.locator(".text h2").textContent();
+  14 |     console.log(textBox.split(" ")[1])
+  15 | })
+```

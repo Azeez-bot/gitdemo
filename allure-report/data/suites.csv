@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","14987","@Smoke Section8 Part-2 ---Unique Locators usage","","Sat Apr 19 12:52:45 IST 2025","passed","Sat Apr 19 12:53:00 IST 2025","","Section8.spec.js","",""
+"","10163","@Smoke Section8 Part-1 ---Unique Locators usage","","Sat Apr 19 12:52:45 IST 2025","passed","Sat Apr 19 12:52:56 IST 2025","","Section8.spec.js","",""
+"","24180","@Smoke Section 9 Part-1","","Sat Apr 19 12:52:45 IST 2025","passed","Sat Apr 19 12:53:09 IST 2025","","Section9.spec.js","",""
