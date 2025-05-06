@@ -8,6 +8,7 @@ test('Section 3',async({ page })=>{
     await page.goForward()
     await page.waitForTimeout(5000);
 console.log("I love you 1 time");
+console.log("I love you n times");
     
 })
 
