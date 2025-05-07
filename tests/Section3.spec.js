@@ -9,6 +9,7 @@ test('Section 3',async({ page })=>{
     await page.waitForTimeout(5000);
 console.log("I love you 1 time");
 console.log("A code move from Azeez Branch");
+console.log("A code move from Azeez Branch from gitdemo person");
 console.log("I love you n times");
     
 })
