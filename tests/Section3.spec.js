@@ -12,6 +12,8 @@ console.log("A code move from Azeez Branch");
 console.log("A code move from Azeez Branch from gitdemo person");
 console.log("A code move from Azeez Branch from gitdemo master");
 console.log("I love you n times");
+const a=9+2+3+4;
+console.log(a)
     
 })
 
